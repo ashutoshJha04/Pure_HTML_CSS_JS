@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashu-Dev</title>
+    <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
+    <link href="https://www.fontspace.com/space-throne-font-f77935">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            scroll-behavior: smooth;
+        }
+
+
+        @font-face {
+            font-family: Belgrado;
+            src: url('belgrado/Belgrado.ttf');
+        }
+
+        @font-face {
+            font-family: bunch;
+            src: url('bunch-blossoms-font (1)/BunchBlossomsPersonalUse-0nA4.ttf');
+        }
+
+        @font-face {
+            font-family: moondance;
+            src: url('moondance/Moondance.otf');
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex;
+            position: fixed;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            z-index: 20;
+
+        }
+
+        nav::after {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            opacity: 0.9;
+            z-index: -2;
+        }
+
+        .navmenu {
+            width: 60vw;
+        }
+
+        nav .navmenu ul {
+            display: flex;
+
+
+
+
+
+        }
+
+        nav .navmenu ul li {
+            margin: auto;
+
+
+        }
+
+        nav .navmenu ul li a {
+            padding: 10px;
+
+            padding: 7px 13px;
+            font-size: 1.2rem;
+            letter-spacing: 1.5px;
+            font-family: 'Lato', sans-serif;
+          
+            color: #fff;
+
+        }
+
+       
+
+        nav .navmenu ul li a:hover
+        {
+            color: rgb(252, 89, 19);
+            
+            
+        }
+        .active{
+            border-bottom: 2px solid rgb(252, 89, 19);
+            color: rgb(252, 89, 19);
+        }
+
+
+
+        .navbar {
+
+            position: relative;
+           
+        }
+
+      
+
+        .logo {
+            font-family: 'Belgrado', Arial, Helvetica, sans-serif;
+            font-size: 1.9rem;
+            padding: 6px 12px;
+           
+            position: relative;
+            animation: letter 2s infinite linear;
+          
+            text-align: center;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            height: min-content;
+            color: #fff;
+            z-index: 100;
+        }
+
+        @keyframes letter {
+            0% {
+                letter-spacing: 0.5px;
+            }
+
+            25% {
+                letter-spacing: 1.5px;
+            }
+
+            50% {
+                letter-spacing: 2.5px;
+            }
+
+            75% {
+                letter-spacing: 1.5px;
+            }
+
+            100% {
+                letter-spacing: 0.5px;
+            }
+        }
+
+        .logo::after {
+            position: absolute;
+            content: "";
+            width: 15px;
+            height: 15px;
+            top: 0px;
+            left: 0px;
+            border: 4px solid #fff;
+            border-width: 2px 0 0 2px;
+            animation: logo-top 2s infinite linear;
+            
+
+
+
+        }
+
+        @keyframes logo-top {
+            0% {
+                top: 0px;
+                left: 0px;
+                opacity: 0.2;
+            }
+
+            25% {
+                top: -5px;
+                left: -5px;
+                opacity: 0.5;
+            }
+
+            50% {
+                top: -10px;
+                left: -10px;
+                opacity: 1;
+
+            }
+
+            75% {
+                top: -5px;
+                left: -5px;
+                opacity: 0.5;
+
+            }
+
+            100% {
+                top: 0px;
+                left: 0px;
+                opacity: 0.2;
+
+            }
+
+        }
+
+        .logo::before {
+            position: absolute;
+            content: "";
+            width: 15px;
+            height: 15px;
+            bottom: 0px;
+            right: 0px;
+            border: 4px solid #fff;
+            border-width: 0 2px 2px 0;
+            animation: logo-bot 2s infinite linear;
+           
+
+
+
+
+        }
+
+        @keyframes logo-bot {
+            0% {
+                bottom: 0px;
+                right: 0px;
+                opacity: 0.2;
+                /* letter-spacing: 1px; */
+            }
+
+            25% {
+                bottom: -5px;
+                right: -5px;
+                opacity: 0.5;
+            }
+
+            50% {
+                bottom: -10px;
+                right: -10px;
+                opacity: 1;
+                /* letter-spacing: 2px; */
+
+            }
+
+            75% {
+                bottom: -5px;
+                right: -5px;
+                opacity: 0.5;
+
+            }
+
+            100% {
+                bottom: 0px;
+                right: 0px;
+                opacity: 0.2;
+                /* letter-spacing: 1px; */
+
+            }
+        }
+
+        /* hero section */
+        .hero {
+            
+            height: 90vh;
+            font-family: 'Lato', sans-serif;
+
+
+        }
+
+        .hero .bg {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+            height: 100vh;
+            background-image: url("bg3pc.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            z-index: -7;
+            clip-path: polygon(50% 89%, 100% 77%, 100% 0, 0 0, 0 77%);
+           
+        }
+
+        .hero-section {
+
+            z-index: 12;
+            width: 100vw;
+            height: 100vh;
+            border: #000;
+            color: #fff;
+
+
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero1 {
+            font-size: 36px;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .hero2 {
+            font-size: 26px;
+
+
+        }
+
+
+        .hero3 {
+            margin-top: 5px;
+            position: relative;
+            font-size: 26px;
+
+
+        }
+
+
+
+        .chng {
+            color: rgb(252, 89, 19);
+
+
+        }
+
+
+
+
+
+
+
+       
+
+        .hero4 {}
+
+        .hero4 ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero4 ul li a {
+            margin: 6px;
+        }
+
+        .hero4 ul li a img {
+            width: 39px;
+            height: 39px;
+
+
+        }
+
+        .img2,
+        .img3 {
+            width: 15px;
+            height: 15px;
+        }
+
+
+
+      
+
+        .load {
+            width: 40px;
+            height: 60px;
+            border: 2px solid white;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            top: 100%;
+          
+
+        }
+
+        .white {
+            color: #fff;
+        }
+
+        .load ul li {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: #fff;
+            list-style: none;
+            position: absolute;
+            top: 20%;
+            left: 40%;
+            animation: hide 1s infinite linear;
+
+        }
+
+        @keyframes hide {
+            from {
+                top: 20%;
+                opacity: 1;
+            }
+
+            from {
+                top: 90%;
+                opacity: 0;
+            }
+        }
+
+        .c {
+            background-color: #fff;
+        }
+
+        .menubutton {
+            display: none;
+        }
+
+        @media screen and (max-width:910px) {
+
+
+
+
+            .navmenu {
+                display: none;
+            }
+
+            .hero .bg {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100vw;
+                height: 100vh;
+                background-image: url('https://images.unsplash.com/photo-1585862705417-671ae64f0eb7?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8YmxhY2slMjBib29rfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=600');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                background-attachment: fixed;
+                z-index: -7;
+                clip-path: polygon(50% 89%, 100% 77%, 100% 0, 0 0, 0 77%);
+                
+            }
+
+            .logo {
+                font-size: 1rem;
+            }
+
+            .hero1 {
+                font-size: 24px;
+                font-weight: 700px;
+                
+                width: 80%;
+                
+                margin: 0px auto;
+            }
+
+            .hero2 {
+                font-size: 15px;
+                width: 60%;
+               
+                margin: 0px auto;
+
+
+               
+            }
+
+            .hero3 {
+                font-size: 20px;
+                width: 80%;
+                
+                margin: 0px auto;
+
+
+               
+            }
+
+            .hero4 {
+                
+                width: 60%;
+                margin: 0px auto;
+            }
+
+            .menubutton {
+                display: block;
+            }
+
+            .container {
+                display: flex;
+
+                flex-direction: column;
+                height: auto;
+                width: auto;
+                
+            }
+
+        }
+
+        /* services */
+
+        .graph {
+            width: 100%;
+            font-family: 'Lato', sans-serif;
+
+            padding: 30px;
+        }
+
+        .graph div {
+            width: 40vw;
+            height: 15px;
+            
+            position: relative;
+            border-radius: 12px;
+           
+        }
+        .graph div::before{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: rgb(219, 213, 213);
+            z-index: -1;
+            border-radius: 12px;
+        }
+
+        .htm::after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 85%;
+            top: 0px;
+            left: 0px;
+            background-color: orangered;
+            border-radius: 12px;
+            z-index: -1;
+            animation: bar1 5s linear;
+        }
+
+        @keyframes bar1 {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 85%;
+            }
+        }
+
+        .cs::after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 75%;
+            top: 0px;
+            left: 0px;
+            background-color: blue;
+            border-radius: 12px;
+            animation: bar2 5s linear;
+
+
+            z-index: -1;
+        }
+
+        @keyframes bar2 {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 75%;
+            }
+        }
+
+        .bs::after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 65%;
+            /* 65 */
+            top: 0px;
+            left: 0px;
+            background-color: orange;
+            border-radius: 12px;
+            animation: bar3 5s linear;
+
+
+            z-index: -1;
+        }
+
+        @keyframes bar3 {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 65%;
+            }
+        }
+
+        .btstrp::after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 70%;
+            /* 70 */
+            top: 0px;
+            left: 0px;
+            background-color: yellow;
+            border-radius: 12px;
+            animation: bar4 5s linear;
+
+
+            z-index: -1;
+        }
+
+        @keyframes bar4 {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 70%;
+            }
+        }
+
+        .container {
+            display: flex;
+
+        }
+
+        .container .use {
+            padding: 30px;
+            width: 50vw;
+
+        }
+
+        .use div {
+            width: 40vw;
+            font-family: 'Lato', sans-serif;
+            
+        }
+
+        .webdev ion-icon,
+        .topics ion-icon,
+        .tech ion-icon {
+            width: 50px;
+            height: 60px;
+            float: left;
+            margin-right: 15px;
+            z-index: -1;
+        }
+
+        @media screen and (max-width:910px) {
+            body {
+                background-color: rgb(174, 171, 171);
+
+            }
+
+            .graph {
+
+
+                padding: 15px;
+                padding-left: 34px;
+                width: 90vw;
+               
+                margin: auto;
+            }
+
+            .graph div {
+                width: 80vw;
+            }
+
+            .container .use {
+
+
+                margin-right: 65px;
+                width: 90vw;
+              
+                margin: 0px auto;
+                padding-left: 20px;
+
+            }
+
+            .use div {
+                width: 80vw;
+               
+            }
+
+
+
+
+        }
+
+        @media screen and (max-width:500px) {
+            .hero1 {
+                font-size: 30px;
+            }
+
+
+
+        }
+
+        .serv {
+            font-size: 20px;
+            font-family: 'Lato', sans-serif;
+        }
+
+        @media screen and (max-width:910px) {
+            .use {}
+
+            #hide {
+
+               
+                padding: 12px;
+                color: white;
+                display: none;
+
+               
+            }
+
+
+            #hide ul {
+                flex-direction: column;
+            }
+
+            #hide ul li {
+                list-style: none;
+              
+                border: 2px solid black;
+                padding: 5px;
+                display: block;
+                transition: 3s;
+                margin: 10px;
+                text-align: center;
+                min-width: 100px;
+                box-shadow: -2px -1px 13px 0px rgb(238, 234, 234);
+
+
+            }
+
+            #hide ul li a {
+                padding: 5px;
+                width: 40vw;
+                font-size: small;
+            }
+
+            .webdev {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+            }
+
+            .webdev p,
+            .topics p,
+            .tech p {
+                margin-bottom: 10px;
+            }
+
+            .webdev b,
+            .topics b,
+            .tech b {
+                margin-bottom: 5px;
+                font-size: 25px;
+            }
+
+            .topics {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            .tech {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+           
+        }
+
+        /* preloader */
+        #preloader {
+          
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            
+            width: 100%;
+            height: 100%;
+            background: #000000 url('https://media.giphy.com/media/ycfHiJV6WZnQDFjSWH/giphy.gif') no-repeat center center;
+            z-index: 100;
+            overflow-block: unset;
+        }
+
+        /* intro */
+        .intro {
+            padding: 12px;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .intro h1 {
+            margin-bottom: 14px;
+        }
+
+        #proj {
+
+            height: 70vh;
+            width: 65vw;
+            background-image: url('https://images.unsplash.com/photo-1637004732258-4b792ce8f474?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fGJsYWNrfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=600');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            border-radius: 12px;
+
+
+        }
+
+        .pors {
+            align-items: center;
+           
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 12px;
+
+
+            color: #fff;
+
+        }
+
+        .pors a {
+            padding: 10px;
+            border: 2px solid white;
+            color: #fff;
+            border-radius: 12px;
+
+        }
+
+        .pors h2 {}
+
+        .pors a:hover {
+            background-color: rgb(252, 89, 19);
+            transition: 1s ease-in-out;
+            transform: scale(1.2);
+        }
+
+        @media screen and (max-width:600px) {
+            #proj {
+                height: 50vh;
+            }
+
+        }
+
+        .swiper {
+            width: 100vw;
+            height: 60vh;
+            margin: 0px auto;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+        }
+
+        .imgcption {
+            position: absolute;
+            color: white;
+            font-family: 'bunch', Arial, Helvetica, sans-serif;
+            /* font-family: 'Sedgwick Ave Display', cursive; */
+        }
+
+        .swiper {
+            margin-left: auto;
+            margin-right: auto;
+
+            box-shadow: 18px 18px 30px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: rgb(252, 89, 19);
+        }
+
+        /* contact */
+        #cntct{
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .contact {
+
+            padding: 20px;
+            font-family: 'Lato', sans-serif;
+           
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px 45px;
+            
+        }
+
+        
+
+        .loc {
+            margin-top: 10px;
+        }
+
+        .state {
+            display: flex;
+
+        }
+
+        .icon {
+            margin-right: 12px;
+            margin-left: 12px;
+        }
+
+        .email {
+            display: flex;
+
+        }
+
+        .insta {
+            display: flex;
+        }
+
+        .form {
+            background-color: #000;
+            color: #fff;
+
+            width: 50vw;
+            padding: 5vw;
+        }
+
+        .name input,
+        .emai input,
+        .message textarea {
+            border: none;
+            outline: none;
+            border-bottom: 2px solid white;
+            background-color: #000;
+            margin-bottom: 10px;
+            width: 40vw;
+            color: rgb(252, 89, 19);
+            padding: 5px;
+        }
+
+        form button {
+            padding: 8px 12px;
+            background-color: black;
+            color: #fff;
+            border: 2px solid white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        @media screen and (max-width:910px) {
+            body{
+                background-color: #fff;
+            }
+            #cntct{
+                display: flex;
+                flex-direction: column;
+                
+                
+            }
+            .name input,
+        .emai input,
+        .message textarea {
+            border: none;
+            outline: none;
+            border-bottom: 2px solid white;
+            background-color: #000;
+            margin-bottom: 10px;
+            width: 80vw;
+            color: rgb(252, 89, 19);
+            padding: 5px;
+        }
+        .form {
+            background-color: #000;
+            color: #fff;
+            box-shadow: 12px 12px 30px black;
+            width: 90vw;
+            margin: auto;
+            
+            
+        }
+        .contact{
+            font-size: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+       .tech{
+           border-bottom: 2px dashed black;
+           
+       }
+        
+        
+    }
+    @media screen and (max-width:500px) {
+        .graph{
+            padding-left: 15px;
+           
+        }
+        #proj{
+            height: 45vh;
+            width: 80vw;
+        }
+        .pors{
+            font-size: 12px;
+            width: 80vw;
+        }
+        .swiper{
+            height: 45vh;
+        }
+        .imgcption{
+            font-size: 15px;
+        }
+        footer{
+            font-size: 10px;
+        }
+    }
+    footer{
+        position: relative;
+        
+        width: 100%;
+        background: #000000;
+        min-height: 100px;
+        padding: 20px 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+    }
+    footer .socilicon,
+    .menu{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+    }
+    footer .socilicon li,.menu li{
+        list-style: none;
+    }
+    footer .socilicon li a
+    {
+        font-size: 2em;
+        color: #fff;
+        margin: 0px 10px;
+        display: inline-block;
+        transition: 0.5s;
+
+    }
+    footer .socilicon li a:hover{
+        transform: translateY(-10px);
+    }
+    .menu li a{
+        font-size: 1.2em;
+        color: #fff;
+        margin: 0px 10px;
+        display: inline-block;
+        text-decoration: none;
+
+        opacity: 0.75;
+    }
+    .menu li a:hover{
+        opacity: 1;
+    }
+    footer p{
+        color: #fff;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-size: 1.1em;
+        
+    }
+   
+
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+<body>
+    <div id="preloader"></div>
+    <header>
+        <div class="navbar">
+            <nav>
+                <div class="logo" id="logo">DIGI</div>
+                <div class="navmenu" id="hide">
+                    <ul>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer" class="active" style="color:rgb(252, 89, 19) ;">Home</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">About</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Contact</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Tools</a></li>
+                    </ul>
+                </div>
+               
+
+                <a href="#" id="me" class="menubutton" onclick="hide()" style="color: white;">
+                    <ion-icon name="grid-outline"></ion-icon>
+                </a>
+            </nav>
+        </div>
+        <div class="hero">
+            <div class="bg">
+
+                <div class="hero-section">
+                    <div class="hero1">
+                        WELCOME TO <span style="color: rgb(252, 89, 19);">DIGI</span>
+                    </div><br>
+                    <div class="hero2">
+                        ABOUT ME
+                    </div>
+                    <div class="hero3">
+                        
+                        A WEBSITE FOR <span class="jsng" style="color: rgb(252, 89, 19);"></span>
+                    </div><br>
+                    <div class="hero4">
+                        <ul>
+                            <li><a href=""><img src="ins.png" width="45px" height="45px"></a></li>
+                            <li><a href=""><img class="img2" src="facebook.png" width="15px" height="15px"></a></li>
+                            <li><a href=""><img class="img3" src="google.png" width="15px" height="15px"></a></li>
+
+                        </ul>
+                    </div>
+
+                    <center><a>
+                            <div class="load">
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </a></center>
+                </div>
+            </div>
+
+        </div>
+    </header><br>
+    <div class="services">
+
+        <center>
+            <div class="serv"><b>What Do We Offer</b></div>
+        </center><br>
+        <div class="container">
+            <div class="graph">
+                <b>Html</b><br>
+                <div class="htm"></div><br>
+                <b>CSS</b><br>
+                <div class="cs"></div><br>
+                <b>Javascript</b><br>
+                <div class="bs"></div><br>
+                <b>Bootstrap</b><br>
+                <div class="btstrp"></div><br>
+
+
+            </div>
+            <div class="use">
+                <div class="webdev">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                    <b>Web Developer</b>
+                    <p>We make tutorials of all the Programming and Scripting languages to help for free.</p>
+                </div><br>
+                <div class="topics">
+                    <ion-icon name="desktop-outline"></ion-icon>
+                    <b>University Important Topics</b>
+                    <p>We also covers all the important topics as per university to help students to understand topic
+                        easily.</p><br>
+                    <div class="tech">
+                        <ion-icon name="language-outline"></ion-icon>
+                        <b>Technical Article</b>
+                        <p>We write articles on current and Interesting Technicals Topic to spread knowledge and
+                            sometimes on Social Causes too.</p><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="intro">
+            <center>
+                <h2>My projects and source code</h2>
+            </center>
+            <center>Digi welcomes you, Just click on file and get the source code and we will be launching technical
+                article soon.Stay tuned to our webpage. Have a great and safe day.</center>
+            <center><br><br>
+                <div id="proj">
+
+                    <div class="pors">
+                        <h2>DIGI</h2>
+                        <br>
+                        <h4>HOUSE OF WEB DEVELOPERS AND TECHNOLOGY</h4><br>
+                        <a href="#" title="Coming soon" onclick="pro()">Project</a>
+                    </div>
+
+
+
+                    
+                </div>
+                
+            </center>
+
+        </div>
+        <!-- slides -->
+
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img
+                        src="https://media.istockphoto.com/photos/black-abstract-technological-background-with-hexagon-cells-3d-of-picture-id1171481416?b=1&k=20&m=1171481416&s=170667a&w=0&h=Nj1ctjAVu4itqhiBor7mYN4AL_YeKZr-zB9iv4vUIbw="
+                        alt="">
+                    <div class="imgcption">
+                        <center><q> Ashutosh Jha aka Digi is a Web Developer <br> Digi want to help others by providing
+                                free projects on Web Development </q></center> <br>
+                        <center style="color:rgb(252, 89, 19) ;"><q> Ashutosh Jha , Web Developer </q></center>
+                    </div>
+
+                </div>
+                <div class="swiper-slide"><img
+                        src="https://media.istockphoto.com/photos/abstract-3d-background-picture-id1182956228?b=1&k=20&m=1182956228&s=170667a&w=0&h=0Us8jpDfFBCdmstUVXzJsmxsU0iioJCX05r1NFq_NtQ="
+                        alt="">
+                    <div class="imgcption">
+                        <center><q> Ashutosh Jha aka Digi is a Web Developer <br> Digi want to help others by providing
+                                free projects on Web Development </q></center> <br>
+                        <center style="color:rgb(252, 89, 19) ;"><q> Ashutosh Jha , Web Developer </q></center>
+                    </div>
+                </div>
+                <div class="swiper-slide"><img
+                        src="https://media.istockphoto.com/photos/black-brick-wall-background-texture-dark-masonry-picture-id915097804?b=1&k=20&m=915097804&s=170667a&w=0&h=tWu_L3KysRE2q63VYx0LVkPojHmTKTj5TITlh2wMI7g="
+                        alt="">
+                    <div class="imgcption">
+                        <center><q> Ashutosh Jha aka Digi is a Web Developer <br> Digi want to help others by providing
+                                free projects on Web Development </q></center> <br>
+                        <center style="color:rgb(252, 89, 19) ;"><q> Ashutosh Jha , Web Developer </q></center>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+      
+        <br><br>
+        <!-- Contact -->
+        <center>
+            <div class="serv"><b>Get in Touch</b></div>
+            <center style="font-family: 'Lato', sans-serif;">Feel free to drop us a line to Contact-us</center>
+            <br>
+        </center><br>
+        <div id="cntct">
+
+            <div class="contact">
+                <div class="about">
+                    <h2>Feel Free To Contact</h2>
+                    <p>Hello Everyone! Have a great day :) I am here to help you. If you want to know something or you
+                        have
+                        any suggestion then please mail me. Thank You.</p>
+                </div>
+                <div class="loc">
+                    <div class="state">
+                        <div class="icon">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+                        <div class="ans">Faridabad,Haryana</div>
+                    </div>
+                    <div class="email">
+                        <div class="icon">
+                            <ion-icon name="mail-open-outline"></ion-icon>
+                        </div>
+                        <div class="ans">jha.ashutosh2022@gmail.com</div>
+                    </div>
+                    <div class="insta">
+                        <div class="icon">
+                            <ion-icon name="logo-instagram" title="Follow me on instagram for additional support">
+                            </ion-icon>
+                        </div>
+                        <div class="ans" title="Follow me on instagram for additional support">jha.ashutosh2004</div>
+                    </div>
+                </div>
+            </div><br>
+            <div class="form">
+                <form action="">
+                    <div class="name">
+                        <label for="">
+                            Name
+                        </label><br><br>
+                        <input type="text" name="" id="name">
+                    </div><br><br>
+                    <div class="emai">
+                        <label for="">
+                            Email
+                        </label><br><br>
+                        <input type="email" name="" id="email"><br>
+                    </div><br>
+                    <div class="message">
+                        <label for="">
+                            Message
+                        </label><br><br>
+                        <textarea name="" id="txtar" cols="20" rows="5"></textarea>
+                    </div><br><br>
+                    <button>Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <!-- footer -->
+    <footer>
+       
+        <ul class="socilicon">
+            <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-whatsapp"></ion-icon>
+            </a></li>
+        </ul>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Tools</a></li>
+        </ul>
+        <p>
+            @2021  Online Tutorials | All Rights Reserved
+        </p>
+
+    </footer>
+
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        // typewritter
+        var typed = new Typed('.jsng', {
+            strings: ['FRESHERS', 'FREINDS', 'WEB-DEV.'],
+            typeSpeed: 200,
+            backspeed: 200,
+            loop: true
+
+        })
+        // menubar
+        // let x = document.querySelectorAll('.menubutton');
+
+        function hide() {
+            var x = document.getElementById("hide");
+            var y = document.getElementById("logo");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+                y.style.display = "block";
+            } else {
+                x.style.display = "block";
+                y.style.display = "none";
+                alert("Press Menu button again for Exit");
+
+            }
+        }
+        // preloader
+        var loader = document.getElementById("preloader");
+
+
+
+        window.addEventListener("load", function () {
+
+            loader.style.display = "none";
+
+
+
+        })
+        // project section
+        function pro() {
+            alert("Available soon or may be it will available after 2nd week of july");
+
+        }
+
+    </script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 3,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            autoplay: {
+                delay: 500
+
+            }
+
+
+        });
+    </script>
+</body>
+
+</html>
